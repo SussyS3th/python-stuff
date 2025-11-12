@@ -43,7 +43,7 @@ tax = round(tax, 0)
 print("The tax is:", tax, "thalers")
 
 
-# November 12, 2025 - leap year calc, number guessing game
+# November 12, 2025 - leap year calc
 
 year = int(input("Enter a year: "))
 
@@ -56,7 +56,7 @@ elif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
 else: print("Common year")
 
 
-
+## number guessing game
 
 secret_number = 777 # It can be changed to whatever number
 
