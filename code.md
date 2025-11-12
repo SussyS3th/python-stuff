@@ -22,6 +22,7 @@ end_minutes = TME % 60
 
 print(end_hour, end_minutes, sep=":")
 
+
 # November 5, 2025 - Tax Calculator
 
 income = float(input("Enter the annual income: "))
@@ -40,3 +41,16 @@ tax = round(tax, 0)
 
 
 print("The tax is:", tax, "thalers")
+
+
+# November 12, 2025 - leap year calc
+
+year = int(input("Enter a year: "))
+
+if (year < 1582):
+    print("Not within the Gregorian calendar period")
+    
+elif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
+    
+else: print("Common year")
