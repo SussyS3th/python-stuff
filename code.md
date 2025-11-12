@@ -69,8 +69,6 @@ print(
 +================================+
 """)
 
-
-
 guess = 0
 
 while guess != secret_number:
