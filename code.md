@@ -1,10 +1,10 @@
-# September 23, 2025 - First real coding proiblem i solved in python
+# September 23, 2025 - Complex Expression
 
 x = float(input("Enter value for x: "))
 print("y =",str( 1 / (x+1 /(x+1/ (x+1))) / x))
 
 
-# September 30 - Evaluate the end time of a period of time, given as a number of minutes. The start time is given as a pair of hours (0..23) and minutes (0..59).
+# September 30 - End Time Calculator
 
 hour = int(input("Starting time (hours): "))
 
@@ -43,7 +43,7 @@ tax = round(tax, 0)
 print("The tax is:", tax, "thalers")
 
 
-# November 12, 2025 - leap year calc
+# November 12, 2025 - Leap Year Checker
 
 year = int(input("Enter a year: "))
 
@@ -56,7 +56,7 @@ elif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
 else: print("Common year")
 
 
-## number guessing game
+## Number Guess
 
 secret_number = 777 # It can be changed to whatever number
 
