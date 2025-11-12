@@ -66,6 +66,9 @@ So, what is the secret number?")
 guess = 0
 
 while guess != secret_number:
+
     guess = int(input())
+    
     print("Ha ha! You're stuck in my loop!")
+    
 print("Well done, muggle! You are free now.")
