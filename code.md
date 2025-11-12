@@ -56,6 +56,8 @@ elif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
 else: print("Common year")
 
 
+
+
 secret_number = 777 # It can be changed to whatever number
 
 print("Welcome to my game, muggle! Enter an integer number and guess what number I've picked for you.                
