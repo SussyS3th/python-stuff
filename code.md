@@ -140,7 +140,7 @@ for letter in word_without_vowels:
     print(letter)
     
 
-# example 2 
+# Word Muncher Simplified
 user_word = input("Enter a word: ").upper()
 
 vowels = "AEIOU"
