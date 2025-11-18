@@ -118,9 +118,6 @@ while True:
         break
 
 ## Vowel Muncher
-# Prompt the user to enter a word
-# and assign it to the user_word variable.
-
 word_without_vowels = ""
 
 user_word = input("Enter a word: ")
