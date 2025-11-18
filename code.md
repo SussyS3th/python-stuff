@@ -117,3 +117,42 @@ while True:
         
         break
 
+## Vowel Muncher
+# Prompt the user to enter a word
+# and assign it to the user_word variable.
+
+word_without_vowels = ""
+
+user_word = input("Enter a word: ")
+
+user_word = user_word.upper()
+
+for letter in user_word:
+
+    # Complete the body of the for loop.
+    
+    if (letter in "AEIOU"):
+    
+        continue
+        
+    word_without_vowels += letter
+
+
+for letter in word_without_vowels:
+
+    print(letter)
+    
+
+# example 2 
+user_word = input("Enter a word: ").upper()
+
+vowels = "AEIOU"
+
+print("Filtered Word:")
+
+for letter in user_word:
+
+    if letter not in vowels:
+    
+        print(letter, end='\n')
+
