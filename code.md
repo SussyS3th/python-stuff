@@ -117,7 +117,22 @@ while True:
         
         break
 
-## Vowel Muncher
+## Ugly Vowel Muncher
+
+user_word = input("Enter a word: ").upper()
+
+vowels = "AEIOU"
+
+print("Filtered Word:")
+
+for letter in user_word:
+
+    if letter not in vowels:
+    
+        print(letter, end='\n')
+    
+
+##  Pretty Vowel Muncher
 word_without_vowels = ""
 
 user_word = input("Enter a word: ")
@@ -135,21 +150,5 @@ for letter in user_word:
     word_without_vowels += letter
 
 
-for letter in word_without_vowels:
-
-    print(letter)
-    
-
-### Vowel Muncher Simplified
-user_word = input("Enter a word: ").upper()
-
-vowels = "AEIOU"
-
-print("Filtered Word:")
-
-for letter in user_word:
-
-    if letter not in vowels:
-    
-        print(letter, end='\n')
+print(word_without_vowels)
 
