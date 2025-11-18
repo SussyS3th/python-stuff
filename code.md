@@ -105,7 +105,7 @@ while (guess != word):
 
 print("You've successfully left the loop.")
 
-### example 2
+### Word Guesser Simplified
 
 while True:
 
