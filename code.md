@@ -91,9 +91,9 @@ print("Ready or not, here I come")
 
 # November 17, 2025
 ## Word Guesser
-word = "chupacabra"
+word = "chupacabra" # the word can be changed to match your preference
 
-guess = ""  # Initialize the 'guess' variable with an empty string
+guess = ""
 
 while (guess != word):
 
@@ -111,7 +111,7 @@ while True:
 
     word = input("Enter a word: ")
     
-    if word == "chupacabra":
+    if word == "chupacabra": # the word can be changed to match your preference
     
         print("You've successfully left the loop.")
         
