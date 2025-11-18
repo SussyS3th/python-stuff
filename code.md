@@ -92,11 +92,15 @@ print("Ready or not, here I come")
 # November 17, 2025
 ## Word Guesser
 word = "chupacabra"
+
 guess = ""  # Initialize the 'guess' variable with an empty string
 
 while (guess != word):
+
     guess = input("enter a word: ")
+    
     if (guess == word):
+    
         break
 
 print("You've successfully left the loop.")
@@ -104,8 +108,12 @@ print("You've successfully left the loop.")
 ### example 2
 
 while True:
+
     word = input("Enter a word: ")
+    
     if word == "chupacabra":
+    
         print("You've successfully left the loop.")
+        
         break
 
