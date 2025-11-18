@@ -1,10 +1,12 @@
-# September 23, 2025 - Complex Expression
+# September 23, 2025
+## Complex Expression
 
 x = float(input("Enter value for x: "))
 print("y =",str( 1 / (x+1 /(x+1/ (x+1))) / x))
 
 
-# September 30 - End Time Calculator
+# September 30
+## End Time Calculator
 
 hour = int(input("Starting time (hours): "))
 
@@ -23,7 +25,8 @@ end_minutes = TME % 60
 print(end_hour, end_minutes, sep=":")
 
 
-# November 5, 2025 - Tax Calculator
+# November 5, 2025
+## Tax Calculator
 
 income = float(input("Enter the annual income: "))
 
@@ -43,7 +46,8 @@ tax = round(tax, 0)
 print("The tax is:", tax, "thalers")
 
 
-# November 12, 2025 - Leap Year Checker
+# November 12, 2025
+## Leap Year Checker
 
 year = int(input("Enter a year: "))
 
@@ -83,3 +87,25 @@ for i in range(1,6):
     time.sleep(1)
     
 print("Ready or not, here I come")
+
+
+# November 17, 2025
+## Word Guesser
+word = "chupacabra"
+guess = ""  # Initialize the 'guess' variable with an empty string
+
+while (guess != word):
+    guess = input("enter a word: ")
+    if (guess == word):
+        break
+
+print("You've successfully left the loop.")
+
+### example 2
+
+while True:
+    word = input("Enter a word: ")
+    if word == "chupacabra":
+        print("You've successfully left the loop.")
+        break
+
