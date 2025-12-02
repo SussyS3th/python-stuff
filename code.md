@@ -153,7 +153,7 @@ for letter in user_word:
 print(word_without_vowels)
 
 # December 2, 2025
-## Pryamids
+## Pyramids
 
 blocks = int(input("Enter the number of blocks: "))
 
