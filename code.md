@@ -152,3 +152,22 @@ for letter in user_word:
 
 print(word_without_vowels)
 
+# December 2, 2025
+## Pryamids
+
+blocks = int(input("Enter the number of blocks: "))
+
+height = 0;
+
+blocksN = 1 # blocks needed for next layer
+
+
+while blocks >= blocksN:
+
+    blocks-= blocksN
+    height += 1
+    blocksN += 1
+
+print("The height of the pyramid:", height)
+
+
