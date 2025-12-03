@@ -194,5 +194,49 @@ while c0 != 1:
         steps += 1
 
 print("steps = ",steps)
+
+# December 3, 2025
+## Beatles
+
+beatles = []
+
+print("Step 1:", beatles)
+
+
+print("Step 2:", beatles)
+
+beatles.append("John Lennon")
+
+beatles.append("Paul McCartney")
+
+beatles.append("George Harrison")
+
+
+print("Step 3:", beatles)
+
+members_to_add = ["Stu Sutcliffe", "Pete Best"]
+
+for member in members_to_add:
+
+    user_input = input(f"Add {member} to the band? (yes/no): ")
     
+    if user_input.lower() == "yes":
+    
+        beatles.append(member)
+
+
+print("Step 4:", beatles)
+
+del beatles[-1]
+
+del beatles[-1]
+
+
+
+print("Step 5:", beatles)
+
+beatles.insert(0, "Ringo Starr")
+
+print("The Fab", len(beatles))
+
 
