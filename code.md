@@ -369,4 +369,43 @@ for i in range(2, x + 1):
 	
 			print(i + 1, end=" ")
 print()
+## mileage conversions
+def liters_100km_to_miles_gallon(liters):
+    
+    gpl = 1 / 3.785411784 
+	
+    mpk = 1 / 1609.344
+	
+    fact = 100 * gpl * mpk
+	
+    C = 235.2145833333333
+	
+    return C / liters
+    
+    
+def miles_gallon_to_liters_100km(miles):
+    
+    C = 235.2145833333333
+	
+    return C / miles
 
+print("Fuel Consumption Converter")
+
+print("1: l/100km to mpg")
+
+print("2: mpg to l/100km")
+
+choice = input("Select conversion (1 or 2): ")
+
+if choice == '1':
+
+    val = float(input("Enter liters per 100km: "))
+    print(f"Result: {liters_100km_to_miles_gallon(val)} mpg")
+	
+elif choice == '2':
+
+    val = float(input("Enter miles per gallon: "))
+    print(f"Result: {miles_gallon_to_liters_100km(val)} l/100km")
+	
+else:
+    print("Invalid selection.")
