@@ -364,7 +364,9 @@ user_input = input("Enter a number: ")
 x = int(user_input)
 
 for i in range(2, x + 1):
+
 	if is_prime(i + 1):
+	
 			print(i + 1, end=" ")
 print()
 
