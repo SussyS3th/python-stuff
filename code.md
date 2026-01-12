@@ -373,20 +373,15 @@ print()
 def liters_100km_to_miles_gallon(liters):
     
     gpl = 1 / 3.785411784 
-	
     mpk = 1 / 1609.344
-	
     fact = 100 * gpl * mpk
-	
     C = 235.2145833333333
-	
     return C / liters
     
     
 def miles_gallon_to_liters_100km(miles):
     
     C = 235.2145833333333
-	
     return C / miles
 
 print("Fuel Consumption Converter")
