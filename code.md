@@ -360,6 +360,7 @@ def is_prime(n):
     return True
 
 user_input = input("Enter a number: ")
+
 x = int(user_input)
 
 for i in range(2, x + 1):
