@@ -404,3 +404,116 @@ elif choice == '2':
 	
 else:
     print("Invalid selection.")
+
+# January 20, 2026
+## tictactoe
+
+import random
+
+def display_board(board):
+    # The function accepts one parameter containing the board's current status 
+    # and prints it out to the console.
+    print("+-------+-------+-------+")
+    for row in range(3):
+        print("|       |       |       |")
+        print(f"|   {board[row][0]}   |   {board[row][1]}   |   {board[row][2]}   |")
+        print("|       |       |       |")
+        print("+-------+-------+-------+")
+
+def enter_move(board):
+    # The function accepts the board's current status, asks the user about their move,
+    # checks the input, and updates the board according to the user's decision.
+    move = input("Enter your move (1-9): ")
+    try:
+        move = int(move)
+        if move < 1 or move > 9:
+            print("Invalid move. Must be between 1 and 9.")
+            enter_move(board)
+            return
+        
+        # Map 1-9 to board indices [row][col]
+        row = (move - 1) // 3
+        col = (move - 1) % 3
+
+        if board[row][col] == 'X' or board[row][col] == 'O':
+            print("That space is already taken. Choose another.")
+            enter_move(board)
+            return
+
+        board[row][col] = 'O' # User is 'O'
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        enter_move(board)
+
+def make_list_of_free_fields(board):
+    # The function browses the board and builds a list of all the free squares;
+    # the list consists of tuples, while each tuple is a pair of row and column numbers.
+    free_fields = []
+    for row in range(3):
+        for col in range(3):
+            if board[row][col] != 'X' and board[row][col] != 'O':
+                free_fields.append((row, col))
+    return free_fields
+
+def victory_for(board, sign):
+    # The function analyzes the board's status in order to check if
+    # the player using 'O's or 'X's has won the game
+    # Check rows, columns, and diagonals
+    for i in range(3):
+        if all(board[i][j] == sign for j in range(3)) or \
+           all(board[j][i] == sign for j in range(3)):
+           return True
+    if all(board[i][i] == sign for i in range(3)) or \
+       all(board[i][2-i] == sign for i in range(3)):
+        return True
+    return False
+
+def draw_move(board):
+    # The function draws the computer's move and updates the board.
+    free_fields = make_list_of_free_fields(board)
+    if free_fields:
+        row, col = random.choice(free_fields)
+        board[row][col] = 'X' # Computer is 'X'
+    else:
+        # Should not be reached if game logic is correct (game ends on a draw)
+        pass
+
+# --- Example Game Loop ---
+
+if __name__ == "__main__":
+    # Initialize the board with numbers 1-9
+    board = [[i + j*3 + 1 for i in range(3)] for j in range(3)]
+    
+    # Computer makes the first move (center)
+    board[1][1] = 'X'
+    game_running = True
+
+    while game_running:
+        display_board(board)
+        enter_move(board)
+        
+        if victory_for(board, 'O'):
+            display_board(board)
+            print("You won!")
+            game_running = False
+            continue
+
+        if not make_list_of_free_fields(board):
+            display_board(board)
+            print("It's a draw!")
+            game_running = False
+            continue
+
+        draw_move(board)
+        
+        if victory_for(board, 'X'):
+            display_board(board)
+            print("Computer won!")
+            game_running = False
+            continue
+            
+        if not make_list_of_free_fields(board):
+            display_board(board)
+            print("It's a draw!")
+            game_running = False
+            continue
